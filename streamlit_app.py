@@ -32,11 +32,13 @@ with st.sidebar:
   gender = st.selectbox('Gender', ('male', 'femal'))
   
   #Create DataFrame for the input features
-  data = {'island', island,
-         'bill_length_mm', bill_length_mm,
-         'bill_depth_mm', bill_depth_mm,
-         'flipper_lendth_mm', flipper_lendth_mm,
-         'body_mass_g', body_mass_g,
-         'gender', gender}
+  data = {'island': island,
+         'bill_length_mm': bill_length_mm,
+         'bill_depth_mm': bill_depth_mm,
+         'flipper_lendth_mm': flipper_lendth_mm,
+         'body_mass_g': body_mass_g,
+         'gender': gender}
   input_df = pd.DataFramer(data, index[0])
-input_df
+  input_penguins = pd.contact([input_df, X], axis=0)
+  
+input_penguins

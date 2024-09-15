@@ -40,10 +40,11 @@ with st.sidebar:
          'sex': gender}
   input_df = pd.DataFrame(data, index=[0])
   input_penguins = pd.concat([input_df, X], axis=0)
+  
   #Encode
   encode = ['islande', 'sex']
   df_penguins = pd.get_dummies(input_penguins, prefix=encode)
-  df_penguins[:1]
+  input_row = df_penguins[:1]
   
 with st.expander('Input features'):
   st.write('**Input penguin**')

@@ -37,11 +37,17 @@ with st.sidebar:
          'bill_depth_mm': bill_depth_mm,
          'flipper_lendth_mm': flipper_lendth_mm,
          'body_mass_g': body_mass_g,
-         'gender': gender}
+         'sex': gender}
   input_df = pd.DataFrame(data, index=[0])
   input_penguins = pd.concat([input_df, X], axis=0)
+  
 with st.expander('Input features'):
-  st.write('**Input penguins**')
+  st.write('**Input penguin**')
   input_df
   st.write('**Combined penguins data**')
   input_penguins
+
+#Encode
+encode = ['islande', 'sex']
+df_penguins = pd.get_dummies(input_penguins, prefix=encode)
+

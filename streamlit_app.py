@@ -38,7 +38,7 @@ with st.sidebar:
          'flipper_lendth_mm': flipper_lendth_mm,
          'body_mass_g': body_mass_g,
          'gender': gender}
-  input_df = pd.DataFramer(data, index[0])
+  input_df = pd.DataFrame(data, index[0])
   input_penguins = pd.contact([input_df, X], axis=0)
   
 input_penguins

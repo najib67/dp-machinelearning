@@ -93,12 +93,12 @@ df_prediction_proba.rename(columns={0: 'adelie',
 st.subheader('Predicted Species')
 st.dataframe(df_prediction_proba,
              column_config={
-               'Adelie': st.column_config.ProgressColumn(
-                 'Adelie',
+               "Adelie": st.column_config.ProgressColumn(
+                 "Adelie",
                  format='%f',
                  width='medium',
                  min_value=0,
-                 max_valus=1
+                 max_valus=1,
                 ),
                 'Chinstrap': st.column_config.ProgressColumn(
                  'Chinstrap',

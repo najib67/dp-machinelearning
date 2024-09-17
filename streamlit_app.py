@@ -98,7 +98,7 @@ st.dataframe(df_prediction_proba,
                  format='%f',
                  width='medium',
                  min_value=0,
-                 max_valus=1,
+                 max_valus=1
                 ),
                 'Chinstrap': st.column_config.ProgressColumn(
                  'Chinstrap',
